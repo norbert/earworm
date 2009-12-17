@@ -76,7 +76,7 @@ module Earworm
         'art'  => tag.artist,
         'ttl'  => tag.title,
         'alb'  => tag.album,
-        'tnm'  => tag.track[/^(\d+)/],
+        'tnm'  => (tag.track[/^(\d+)/] if tag.track),
         'gnr'  => tag.genre,
         'yrr'  => tag.year,
       }
